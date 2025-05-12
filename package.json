@@ -1,3 +1,4 @@
+"homepage": "https://miadco.github.io",
 {
   "name": "dopefolio",
   "version": "1.0.0",
@@ -8,6 +9,8 @@
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.css",
     "compress:css": "node-sass css/style.css css/style.css --output-style compressed",
     "build": "npm-run-all prefix:css compress:css"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "GPL-3.0",
